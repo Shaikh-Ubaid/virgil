@@ -21,6 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Test
+        shell: bash -e -l {0}
         run: bash ./ci/linux/build-test-x86.sh
   x86_64-linux:
     runs-on: ubuntu-latest
@@ -28,6 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Test
+        shell: bash -e -l {0}
         run: bash ./ci/linux/build-test-x86_64.sh
 #TODO  x86-64-linux-O0:
 #    runs-on: ubuntu-latest
@@ -42,6 +44,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Test
+        shell: bash -e -l {0}
         run: bash ./ci/linux/build-test-x86_64.sh -O1
   x86-64-linux-O2:
     runs-on: ubuntu-latest
@@ -49,6 +52,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Test
+        shell: bash -e -l {0}
         run: bash ./ci/linux/build-test-x86_64.sh -O2
 #  x86-64-linux-O3:
 #    runs-on: ubuntu-latest
@@ -63,6 +67,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Test
+        shell: bash -e -l {0}
         run: bash ./ci/macos/build-test-x86_64.sh
   jvm:
     runs-on: ubuntu-latest
@@ -70,6 +75,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Test
+        shell: bash -e -l {0}
         run: bash ./ci/jvm/build-test-jvm.sh
   wasm:
     runs-on: ubuntu-latest
@@ -77,5 +83,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build and Test
+        shell: bash -e -l {0}
         run: bash ./ci/wasm/build-test-wasm.sh
-
